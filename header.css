@@ -1,0 +1,81 @@
+.header {
+    overflow: hidden;
+    color: rgb(56, 56, 247);
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 15px;
+    border-radius: 4px;
+    
+  }
+  
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  header {
+    background-color: #d0cfda;
+    color:  #1E2135;
+    box-shadow: 1px 2px 6px black;
+    background-size: 100%;
+    width: 100%;
+    color: white;
+    z-index: 5;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    overflow: auto;
+  }
+
+  
+  .header a.active {
+    color:  #1E2135;
+  }
+  a.active:hover{
+    color:  white;
+
+  }
+  #login{
+    background:  #1E2135;
+    color:  white;
+    height: 40px;
+
+  }
+  #login:hover{
+      background:  white;
+      color:  #1E2135;
+
+  }
+  
+  .header-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+  
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+     
+    }
+  }
+  img.logo{
+      width: 150px;
+  }
