@@ -25,7 +25,7 @@
   }
   
   .header {
-    background-color: #76757C;
+    background-color: #d0cfda;
     color:  #1E2135;
     box-shadow: 1px 2px 12px black;
     background-size: 100%;
@@ -36,20 +36,22 @@
   }
   
   .header a.active {
-    color: white;
+    color:  #1E2135;
   }
   a.active:hover{
-    color:  #1E2135;
+    color:  white;
 
   }
   #login{
-    background: white;
-    color:  #1E2135;
+    background:  #1E2135;
+    color:  white;
+    height: 15px;
 
   }
   #login:hover{
-      background:  #1E2135;
-      color: white;
+      background:  white;
+      color:  #1E2135;
+      height: 15px;
   }
   
   .header-right {
@@ -69,4 +71,7 @@
       float: none;
      
     }
+  }
+  img{
+      width: 200px;
   }
