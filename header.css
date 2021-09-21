@@ -30,10 +30,7 @@
     box-shadow: 1px 2px 12px black;
     background-size: 100%;
   }
-  .logo:hover{
-      background: white;
-      color: #1E2135;
-  }
+
   
   .header a.active {
     color:  #1E2135;
@@ -45,13 +42,13 @@
   #login{
     background:  #1E2135;
     color:  white;
-    height: 15px;
+    height: 40px;
 
   }
   #login:hover{
       background:  white;
       color:  #1E2135;
-      height: 15px;
+
   }
   
   .header-right {
@@ -72,6 +69,6 @@
      
     }
   }
-  img{
-      width: 200px;
+  img.logo{
+      width: 150px;
   }
