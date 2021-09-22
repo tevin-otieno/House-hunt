@@ -1,0 +1,81 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #f7f3f1;
+  }
+.landing {
+    background-image: url("../img/wallpaper-3.jpg");
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #f7f3f1;
+
+}
+.landing p, h1 {
+    position: relative;
+    top: 25%;
+
+} 
+.landing h1{
+    padding-bottom: 20px;
+    padding-top: 10px;
+    font-size: 50px;
+    font-weight: bold;
+}
+.landing p{
+    font-size: 25px;
+    font-weight: bold;
+}
+  
+  .wrapper{
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search_box{
+    width: 50%;
+    position: relative;
+  }
+  
+  .search_box input[type="text"]{
+    width: 100%;
+    padding: 20px;
+    padding-right: 60px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.3);
+    border: 2px solid #f7f3f1;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #f7f3f1;
+    outline: none;
+  }
+  
+  .fa-search{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25px;
+    color: #f7f3f1;
+    font-size: 25px;
+  }
+  
+  ::-webkit-input-placeholder {
+    color: #f7f3f1;
+  }
+  ::-moz-placeholder {
+    color: #f7f3f1;
+  }
+  :-ms-input-placeholder {
+    color: #f7f3f1;
+  }
+  
+  
+  
