@@ -7,61 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In and Sign Up</title>
 
-    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="form.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
-    <div class="header">
-        <div>
-          <a href="#default" class="logo">--(Logo)--</a>
-        </div>
-        <div class="header-right">
-          <a class="active" id="active" href="#home">Home</a>
-          <a class="active" id="active" href="#about">About</a>
-          <a class="active" id="active" href="#contact">Contact Us</a>
-          <a class="active" id="active" href="#rent">Rent</a>
-          <a class="active" id="active" href="#buy">Buy</a>
-          <a class="active" id="active" href="#list">List</a>
-          <a class="active" id="login" href="#signin">Login</a>
-        </div>
-      </div>
-
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <form action="#" class="sign-in-form"  onsubmit="submit_form()">
+                <form method="post" target="#" class="sign-in-form"  onsubmit="return validate()">
                     <h2 class="title">Sign In</h2>
                     
                     <div class="form__input-group">
                     <div class="input-field">
                         <i class="fa fa-user"></i>
-                        <input type="text" placeholder="Username" id="n1">
+                        <input type="text" placeholder="Username" name="name" >
                         
                     </div>
                     </div>
 
-                
                     <div class="form__input-group">
                     <div class="input-field">
                         <i class="fa fa-lock"></i>
-                        <input type="password" placeholder="Password" id="p1">
+                        <input type="password" placeholder="Password"  name="password" >
                         
                     </div>
-                    </div>
 
-                    
+                    </div>
                     <div class="form__input-group">
                     <div class="input-field">
                         <i class="fa fa-lock"></i>
-                        <input type="password" placeholder="Confirm Password" id="p2">
+                        <input type="password" placeholder="Retype Password" >
                         
                     </div>   
                     </div>
 
-                    <input type="submit" class="btn solid" value="Login" onClick="create_account()"/> 
+                    <!-- Retype password<br> -->
+                    <input type="password" name="retype_password"><br>
 
+                    <input type="submit" class="btn solid" value="Login" >
                     <p class="social-text"> Or Sign In with social buttons</p> <br>
                     <div class="social-media">
                             <a href="http://www.google.com" class="social-icon">
@@ -77,36 +60,34 @@
                 </form>
             </div>
             <div class="signup-signup">
-                <form action="#" class="sign-up-form" onsubmit="submit_form()">
-                    <h2 class="title">Sign Up</h2>
-                    
+                <form method="post" target="#" class="sign-up-form"  onsubmit="return validate()">
                     <div class="form__input-group">
-                    <div class="input-field">
-                        <i class="fa fa-user"></i>
-                        <input type="text" placeholder="Username" id="n1">
-            
-                    </div>
-                    </div>
+                        <div class="input-field">
+                            <i class="fa fa-user"></i>
+                            <input type="text" placeholder="Username" name="name" >
+                        </div>
+                        </div>
 
-                    
-                    <div class="form__input-group">
-                    <div class="input-field">
-                        <i class="fa fa-envelope icon"></i>
-                        <input type="email" placeholder="Email" id="e1">
-                        
-                    </div>
-                    </div>
+                        <div class="form__input-group">
+                            <div class="input-field">
+                                <i class="fa fa-envelope"></i>
+                                <input type="text" placeholder="email" name="email" >
+                            </div>   
+                            </div>
 
-                    
-                    <div class="form__input-group">
-                    <div class="input-field">
-                        <i class="fa fa-lock"></i>
-                        <input type="password" placeholder="Password" id="p1">
-                    
-                    </div>   
-                    </div>
+                        <div class="form__input-group">
+                            <div class="input-field">
+                                <i class="fa fa-lock"></i>
+                                <input type="password" placeholder="Retype Password"  name="password">  
+                            </div>   
+                            </div>
 
-                    <input type="submit" class="btn solid" value="Login" onClick="create_account()" /> 
+                           <!-- Retype password<br> -->
+                            <input type="password" name="retype_password"><br>
+                            
+                    <input type="submit" class="btn solid" value="Login"/> 
+                    
+
                     <p class="social-text" > Or Sign Up with social buttons</p> <br>
                     <div class="social-media">
                             <a href="http://www.google.com" class="social-icon">
@@ -132,7 +113,6 @@
                     id="sign-up-button">Sign Up</button>
                 </div>
                 <img src="./myImages/" alt="" class="image">
-
             </div>
 
             <div class="panel right-panel">
@@ -148,15 +128,6 @@
         </div>
     </div>
     </div>
-
-
-
-
-
-
-
-
-
     <script src="form.js"></script>
 </body>
 </html>
