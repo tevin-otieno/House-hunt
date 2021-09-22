@@ -226,3 +226,18 @@ body, html {
     -webkit-box-shadow: inset 0 0 10px #000000;
     box-shadow:         inset 0 0 10px #000000;
  }
+ .for-rent {
+     background-color: #65B7D4;
+     color: #1E2135;
+     display: inline-block;
+     font-weight: bolder;
+ }
+ .rent-price{
+     font-weight: bold;
+     color:#148fe9;
+     padding-top: 20px;
+
+ }
+ .product-icon{
+     color: #1E2135;
+ }
