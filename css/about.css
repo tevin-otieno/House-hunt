@@ -1,3 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F7F3F1;
+    color: #1E2135;
+}
 .header {
     overflow: hidden;
     color: rgb(56, 56, 247);
@@ -70,17 +78,24 @@
      
     }
   }
+  
   .About h1{
-      color: #65B7D4;
+      color: #148fe9;
   }
   .About h2{
-      color: #65B7D4;
+      color: #148fe9;
   }
   .About p{
       font-size: 20px;
      
   }
 .footer{
-    background-color: #76757C;
-    color: white;
+    background-color: #1E2135;
+    color:  #F7F3F1;
+}
+h3{
+    font-size: 15px;
+}
+.footer p{
+    font-size: 13px;
 }
