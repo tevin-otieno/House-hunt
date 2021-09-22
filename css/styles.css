@@ -2,6 +2,7 @@ body, html {
     height: 100%;
     margin: 0;
     background-color: #f7f3f1;
+    font-family: 'Poppins';
   }
   .logo-image{
     width: 200px;
@@ -107,19 +108,40 @@ body, html {
   :-ms-input-placeholder {
     color: #f7f3f1;
   }
+  .what-we-do{
+      padding-top: 60px;
+      padding-bottom: 60px;
+      line: height 50px;
+      vertical-align: middle;
+      letter-spacing: normal;
+      word-spacing: 0px;
+      font-weight: bold;
+
+  }
+  
   .rent-icon,
-  .sell-icon,
+  .buy-icon,
   .list-icon{
       width: 200px;
       height: 200px;
           
   }
   .rent-icon img,
-  .sell-icon img,
+  .buy-icon img,
   .list-icon img{
-      width: 200px;
+      width: 80px;
+      padding-top: 30%;
+      margin-left: 20px;
   }
-  .looking-for h2{
-font-weight: bold; 
-font-size: 100px;
+  .rent-icon p,
+  .buy-icon p,
+  .list-icon p{
+      color:#148fe9;
+      padding-top: 20%;
+      margin-left: 30px;
+  }
+  p.looking-for{
+    font-weight: bold; 
+    font-size: 30px;
+    color: #148fe9;
   }
