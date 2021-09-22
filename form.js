@@ -91,12 +91,7 @@ function validateEmail() {
 		return "Email should be a valid address.\n";	
 }
 
-// function validateTerms() {
-// 	var terms = document.getElementsByName("terms")[0];
-// 	if (!terms.checked)
-// 		return "Please accept the Terms of Service and Privacy Policy";	
-// 	return "";
-// }
+
 
 function valueOf(name) {
 	return document.getElementsByName(name)[0].value;
