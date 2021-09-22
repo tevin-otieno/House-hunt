@@ -1,55 +1,58 @@
-function setFormMessage(formElement, type, message) {
-    const messageElement = formElement.querySelector(".form__message");
+/*beginning of new*/
+const sign_in_btn = document.querySelector('#sign-in-button');
+const sign_up_btn = document.querySelector('#sign-up-button');
+const container = document.querySelector('.container');
 
-    messageElement.textContent = message;
-    messageElement.classList.remove("form__message--success", "form__message--error");
-    messageElement.classList.add(`form__message--${type}`);
-}
-
-function setInputError(inputElement, message) {
-    inputElement.classList.add("form__input--error");
-    inputElement.parentElement.querySelector(".form__input-error-message").textContent = message;
-}
-
-function clearInputError(inputElement) {
-    inputElement.classList.remove("form__input--error");
-    inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.querySelector("#login");
-    const createAccountForm = document.querySelector("#createAccount");
-
-    document.querySelector("#linkCreateAccount").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.add("form--hidden");
-        createAccountForm.classList.remove("form--hidden");
-    });
-
-    document.querySelector("#linkLogin").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.remove("form--hidden");
-        createAccountForm.classList.add("form--hidden");
-    });
-
-//prevents user from sharing a name n email
-    // loginForm.addEventListener("submit", e => {
-    //     e.preventDefault();
-
-    //     // Perform your AJAX/Fetch login
-
-    //     setFormMessage(loginForm, "error", "Invalid username/password combination");
-    // });
-
-    document.querySelectorAll(".form__input").forEach(inputElement => {
-        inputElement.addEventListener("blur", e => {
-            if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 10) {
-                setInputError(inputElement, "Username must be at least 10 characters in length");
-            }
-        });
-
-        inputElement.addEventListener("input", e => {
-            clearInputError(inputElement);
-        });
-    });
+sign_up_btn.addEventListener('click', () => {
+    container.classList.add('sign-up-mode');
 });
+
+sign_in_btn.addEventListener('click', () => {
+    container.classList.remove('sign-up-mode');
+});
+
+//console.log(sign_in_btn);
+
+
+
+//validation
+function create_account(){  
+    var n=document.getElementById("n1").value;  
+    var e=document.getElementById("e1").value;  
+    var p=document.getElementById("p1").value;  
+    //var cp=document.getElementById("p2").value;  
+    //Code for password validation  
+             var letters = /^[A-Za-z]+$/;  
+             var email_val = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;  
+    //other validations required code  
+    if(n==''||e==''||p==''||cp==''){  
+        alert("Enter each details correctly");  
+        } 
+    else if(!letters.test(n))  
+            {  
+                alert('Name is incorrect must contain alphabets only');  
+            }  
+    else if (!email_val.test(e))  
+            {  
+                alert('Invalid email format please enter valid email id');  
+            }  
+    // else if(p!=cp)  
+    // {  
+    // alert("Passwords not matching");  
+    // }  
+    else if(document.getElementById("p1").value.length > 12)  
+    {  
+    alert("Password maximum length is 12");  
+    }  
+    else if(document.getElementById("p1").value.length < 6)  
+    {  
+    alert("Password minimum length is 6");  
+    }  
+    else{  
+    alert("Your account has been created successfully...");  
+    window.location="./form.html";  
+    }  
+    } 
+      
+    
+ 
