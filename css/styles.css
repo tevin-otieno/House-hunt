@@ -15,12 +15,14 @@ body, html {
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: #f7f3f1;
+    color: #1E2135;
   }
   
   .navbar a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #1E2135;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -29,7 +31,7 @@ body, html {
   
   .navbar a:hover {
     background: #ddd;
-    color: black;
+    color: #1E2135;
   }
   
 .landing {
@@ -105,6 +107,19 @@ body, html {
   :-ms-input-placeholder {
     color: #f7f3f1;
   }
-  
-  
-  
+  .rent-icon,
+  .sell-icon,
+  .list-icon{
+      width: 200px;
+      height: 200px;
+          
+  }
+  .rent-icon img,
+  .sell-icon img,
+  .list-icon img{
+      width: 200px;
+  }
+  .looking-for h2{
+font-weight: bold; 
+font-size: 100px;
+  }
