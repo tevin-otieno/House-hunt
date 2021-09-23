@@ -8,11 +8,10 @@
   .gallery {
     background: #EEE;
   }
-  
   .gallery-cell {
-    width: 66%;
-    height: 200px;
-    margin-right: 10px;
+    width: 56%;
+    height: 30%;
+    margin-right: 80px;
     background: #8C8;
     counter-increment: gallery-cell;
   }
@@ -26,3 +25,12 @@
     font-size: 80px;
     color: white;
   }
+  img{
+      height: 50px;
+  }
+  .cardposition{
+      float:right;
+  }
+i{
+    display: block;
+}
