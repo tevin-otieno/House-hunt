@@ -1,4 +1,8 @@
 # House-hunt
+<<<<<<< HEAD
+
+The website to search your dream home
+=======
 ## Authors
 1. Telvin Otieno 
 2. Brian Ongati
@@ -46,3 +50,4 @@ View site ( )
 © 2021 | HOuse Hunt
 ### License
 This project is under the [MIT](license) license
+>>>>>>> main
