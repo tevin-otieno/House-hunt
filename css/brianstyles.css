@@ -19,6 +19,7 @@ body, html {
     width: 100%;
     background-color:#1E2135;
     color: #f7f3f1;
+    z-index: 3;
   }
   
   .navbar a {
