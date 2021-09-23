@@ -1,0 +1,30 @@
+body{
+    padding: 30px;
+}
+span{
+    color: blue;
+}
+.hp-about{
+    text-align: center;
+}
+#blog-blog{
+    display: flex;
+    flex-direction: row;
+    justify-content: inherit;
+
+}
+.info-body{
+    margin-left: 30px;
+    font-size: 18px;
+}
+h1{
+    margin-top: 50px;
+    color: blue;
+}
+a{
+    text-decoration: none;
+}
+form{
+    text-align: center;
+    font-size: 18px;
+}
