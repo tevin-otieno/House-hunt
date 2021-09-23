@@ -21,7 +21,6 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%
     /** Restet for REMS **/
 }
 
@@ -33,21 +32,10 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  font-size: 1.6rem;
   line-height: 2;
 }
 
-h1 {
-  font-size: 3.8rem;
-}
 
-h2 {
-  font-size: 3.4rem;
-}
-
-h3 {
-  font-size: 3rem;
-}
 
 img.pic {
   width: 100%;
@@ -75,7 +63,6 @@ img.pic {
   color: white;
   display: inline-block;
   font-weight: 700;
-  font-size: 1.8 rem;
   padding: 1rem 3rem;
   margin-top: 3rem;
   text-decoration: none;
@@ -142,9 +129,6 @@ h2{
     top: 0px;
     right: 0px;
     padding: 20px;
-}
-.footer{
-    font-size: 13px;
 }
 .text-reset{
   color: white;
