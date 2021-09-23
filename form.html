@@ -1,133 +1,77 @@
-<!--beginning of new-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In and Sign Up</title>
-
-    <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignIn & SignUp Form</title>
+    <link rel="stylesheet" href="form.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+      
+    <!--yoo-->
     <div class="container">
-        <div class="forms-container">
-            <div class="signin-signup">
-                <form method="post" target="#" class="sign-in-form"  onsubmit="return validate()">
-                    <h2 class="title">Sign In</h2>
-                    
-                    <div class="form__input-group">
-                    <div class="input-field">
-                        <i class="fa fa-user"></i>
-                        <input type="text" placeholder="Username" name="name" >
-                        
-                    </div>
-                    </div>
-
-                    <div class="form__input-group">
-                    <div class="input-field">
-                        <i class="fa fa-lock"></i>
-                        <input type="password" placeholder="Password"  name="password" >
-                        
-                    </div>
-
-                    </div>
-                    <div class="form__input-group">
-                    <div class="input-field">
-                        <i class="fa fa-lock"></i>
-                        <input type="password" placeholder="Retype Password" >
-                        
-                    </div>   
-                    </div>
-
-                    <!-- Retype password<br> -->
-                    <input type="password" name="retype_password"><br>
-
-                    <input type="submit" class="btn solid" value="Login" >
-                    <p class="social-text"> Or Sign In with social buttons</p> <br>
-                    <div class="social-media">
-                            <a href="http://www.google.com" class="social-icon">
-                                <i class="fa fa-1x fa-google-plus"></i>
-                            </a>
-                            <a href="http://www.facebook.com" class="social-icon" >
-                                <i class="fa fa-1x fa-facebook-square"></i>
-                            </a>
-                            <a href="http://www.twitter.com" class="social-icon">
-                                <i class="fa fa-1x fa-twitter-square"></i>
-                            </a>
-                    </div>
-                </form>
-            </div>
-            <div class="signup-signup">
-                <form method="post" target="#" class="sign-up-form"  onsubmit="return validate()">
-                    <div class="form__input-group">
-                        <div class="input-field">
-                            <i class="fa fa-user"></i>
-                            <input type="text" placeholder="Username" name="name" >
-                        </div>
-                        </div>
-
-                        <div class="form__input-group">
-                            <div class="input-field">
-                                <i class="fa fa-envelope"></i>
-                                <input type="text" placeholder="email" name="email" >
-                            </div>   
-                            </div>
-
-                        <div class="form__input-group">
-                            <div class="input-field">
-                                <i class="fa fa-lock"></i>
-                                <input type="password" placeholder="Retype Password"  name="password">  
-                            </div>   
-                            </div>
-
-                           <!-- Retype password<br> -->
-                            <input type="password" name="retype_password"><br>
-                            
-                    <input type="submit" class="btn solid" value="Login"/> 
-                    
-
-                    <p class="social-text" > Or Sign Up with social buttons</p> <br>
-                    <div class="social-media">
-                            <a href="http://www.google.com" class="social-icon">
-                                <i class="fa fa-1x fa-google-plus"></i>
-                            </a>
-                            <a href="http://www.facebook.com" class="social-icon" >
-                                <i class="fa fa-1x fa-facebook-square"></i>
-                            </a>
-                            <a href="http://www.twitter.com" class="social-icon">
-                                <i class="fa fa-1x fa-twitter-square"></i>
-                            </a>
-                    </div>
-                </form>
-            </div>
-
+      <h1 class="heading">
+        <span class="heading-span-1">Sign</span
+        ><span class="heading-span-2">In</span>
+      </h1>
+      <div class="buttons">
+        <button class="signin-btn">SignIn</button>
+        <button class="signup-btn">SignUp</button>
+      </div>
+      <div class="form-bg"></div>
+      <form class="form sign-in" action="/index.html" onsubmit="myFunction()">
+        <div class="form-input-wrapper">
+          <input
+            autocomplete="off"
+            type="text"
+            class="form-input"
+            id="username"
+            placeholder="Your Name"
+          />
+          <p class="message">Error Message</p>
         </div>
-        <div class="panels-container">
-            <div class="panel left-panel">
-                <div class="content">
-                    <h3  style="color: #fff;">New Here?</h3>
-                    <p  style="color: #fff;">FEEL AT HOME</p>
-                    <button class="btn transparent" 
-                    id="sign-up-button">Sign Up</button>
-                </div>
-                <img src="./myImages/" alt="" class="image">
-            </div>
-
-            <div class="panel right-panel">
-                <div class="content">
-                    <h3  style="color: #fff;">One of Us</h3>
-                    <p  style="color: #fff;">WELCOME BACK!!!</p>
-                    <button class="btn transparent" 
-                    id="sign-in-button">Sign In</button>
-                </div>
-                <img src="" alt="" class="image">
-
-            </div>
+        <div class="form-input-wrapper">
+          <input
+            autocomplete="off"
+            type="text"
+            class="form-input"
+            id="email"
+            placeholder="Email Address"
+          />
+          <p class="message">Error Message</p>
         </div>
+        <div class="form-input-wrapper">
+          <input
+            autocomplete="off"
+            type="password"
+            class="form-input"
+            id="password"
+            placeholder="Password"
+          />
+          <p class="message">Error Message</p>
+        </div>
+        <div class="form-input-wrapper">
+          <input
+            autocomplete="off"
+            type="password"
+            class="form-input"
+            id="password2"
+            placeholder="Confirm Password"
+          />
+          <p class="message">Error Message</p>
+        </div>
+        <input type="submit" value="Submit" class="form-btn" />
+      </form>
     </div>
-    </div>
-    <script src="form.js"></script>
-</body>
+    <script>
+        function myFunction() {
+          alert("The form was submitted");
+        }
+        </script>
+    <script src="form.js"></script>   
+  </body>
 </html>
