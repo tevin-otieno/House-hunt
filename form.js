@@ -1,100 +1,101 @@
-/*beginning of new*/
-const sign_in_btn = document.querySelector('#sign-in-button');
-const sign_up_btn = document.querySelector('#sign-up-button');
-const container = document.querySelector('.container');
+// validations
 
-sign_up_btn.addEventListener('click', () => {
-    container.classList.add('sign-up-mode');
+const container = document.querySelector(".container");
+const headingSpan2 = document.querySelector(".heading-span-2");
+const form = document.querySelector(".form");
+
+const clearForm = () => {
+  document.querySelectorAll(".form-input-wrapper").forEach((item) => {
+    item.className = "form-input-wrapper";
+  });
+  form.reset();
+};
+
+document.querySelector(".signup-btn").addEventListener("click", () => {
+  container.classList.add("change");
+  setTimeout(() => {
+    headingSpan2.textContent = "Up";
+  }, 200);
+  form.className = "form sign-up";
+  clearForm();
 });
 
-sign_in_btn.addEventListener('click', () => {
-    container.classList.remove('sign-up-mode');
+document.querySelector(".signin-btn").addEventListener("click", () => {
+  container.classList.remove("change");
+  setTimeout(() => {
+    headingSpan2.textContent = "In";
+  }, 200);
+  form.className = "form sign-in";
+  clearForm();
 });
 
-//console.log(sign_in_btn);
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const password2 = document.getElementById("password2");
 
+const error = (input, message) => {
+  const inputWrapper = input.parentElement;
+  inputWrapper.className = "form-input-wrapper error";
+  inputWrapper.querySelector(".message").textContent = message;
+};
 
+const success = (input) => {
+  const inputWrapper = input.parentElement;
+  inputWrapper.className = "form-input-wrapper success";
+};
 
-//validation
-// function create_account(){  
-//     var n=document.getElementById("n1").value;  
-//     var e=document.getElementById("e1").value;  
-//     var p=document.getElementById("p1").value;  
-//     //var cp=document.getElementById("p2").value;  
-//     //Code for password validation  
-//              var letters = /^[A-Za-z]+$/;  
-//              var email_val = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;  
-//     //other validations required code  
-//     if(n==''||e==''||p==''||cp==''){  
-//         alert("Enter each details correctly");  
-//         } 
-//     else if(!letters.test(n))  
-//             {  
-//                 alert('Name is incorrect must contain alphabets only');  
-//             }  
-//     else if (!email_val.test(e))  
-//             {  
-//                 alert('Invalid email format please enter valid email id');  
-//             }  
-//     // else if(p!=cp)  
-//     // {  
-//     // alert("Passwords not matching");  
-//     // }  
-//     else if(document.getElementById("p1").value.length > 12)  
-//     {  
-//     alert("Password maximum length is 12");  
-//     }  
-//     else if(document.getElementById("p1").value.length < 6)  
-//     {  
-//     alert("Password minimum length is 6");  
-//     }  
-//     else{  
-//     alert("Your account has been created successfully...");  
-//     window.location="./form.html";  
-//     }  
-//     } 
-      
-function validate() {  
-	var result = "";	
-	result += validateName(); 	
-	result += validateEmail();
-	result += validatePassword();
+const checkEmail = (input) => {
+  const regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-	
-	if (result == "") return true;
-	
-	alert("Validation Result:\n\n" + result);
-	return false;	
-}
+  if (regEx.test(input.value.trim())) {
+    success(input);
+  } else {
+    error(input, "Email is not valid");
+  }
+};
 
-function validateName() {
-	var name = document.getElementsByName("name")[0].value;
-	if (name.length <= 3)
-		return "Name should be at least three characters.\n";	
-	return "";
-}
+const checkRequiredFields = (inputArr) => {
+  inputArr.forEach((input) => {
+    if (input.value.trim() === "") {
+      if (input.id === "password2") {
+        error(input, "Password confirmation is required");
+      } else {
+        error(input, `${input.id} is required`);
+      }
+    } else {
+      success(input);
+    }
+  });
+};
 
-function validatePassword() {
-	var password = valueOf("password");
-	var retype = valueOf("retype_password");
-	
-	if (password.length <= 6) 
-		return "Password should be at least 6 characters.\n";
-	
-}
+const checkLength = (input, min, max) => {
+  if (input.value.length < min) {
+    error(input, `${input.id} must be at least ${min} characters`);
+  } else if (input.value.length > max) {
+    error(input, `${input.id} must be less than ${max} characters`);
+  } else {
+    success(input);
+  }
+};
 
-function validateEmail() {
-	var email = valueOf("email");
-	
-	
-	if (email.indexOf('@') == -1) 
-		return "Email should be a valid address.\n";	
-}
+const passwordsMatch = (input1, input2) => {
+  if (input1.value !== input2.value) {
+    error(input2, "Passwords do not match");
+  }
+};
 
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
+  if (form.classList[1] === "sign-up") {
+    checkRequiredFields([username, email, password, password2]);
+    checkLength(username, 2, 15);
+    checkLength(password, 5, 25);
+    passwordsMatch(password, password2);
+  } else {
+    checkRequiredFields([email, password]);
+  }
+  checkEmail(email);
+});
 
-function valueOf(name) {
-	return document.getElementsByName(name)[0].value;
-}
-    
- 
