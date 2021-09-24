@@ -24,38 +24,32 @@
     font-weight: bold;
   }
   
-  header {
-    background-color: #d0cfda;
+  .header {
+    background-color: #76757C;
     color:  #1E2135;
-    box-shadow: 1px 2px 6px black;
+    box-shadow: 1px 2px 12px black;
     background-size: 100%;
-    width: 100%;
-    color: white;
-    z-index: 5;
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    overflow: auto;
   }
-
+  .logo:hover{
+      background: white;
+      color: #1E2135;
+  }
   
   .header a.active {
-    color:  #1E2135;
+    color: white;
   }
   a.active:hover{
-    color:  white;
+    color:  #1E2135;
 
   }
   #login{
-    background:  #1E2135;
-    color:  white;
-    height: 40px;
+    background: white;
+    color:  #1E2135;
 
   }
   #login:hover{
-      background:  white;
-      color:  #1E2135;
-
+      background:  #1E2135;
+      color: white;
   }
   
   .header-right {
@@ -75,7 +69,4 @@
       float: none;
      
     }
-  }
-  img.logo{
-      width: 150px;
   }
