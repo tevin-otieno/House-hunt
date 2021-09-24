@@ -12,73 +12,69 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="js/brianscripts.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js" integrity="sha512-cA8gcgtYJ+JYqUe+j2JXl6J3jbamcMQfPe0JOmQGDescd+zqXwwgneDzniOd3k8PcO7EtTW6jA7L4Bhx03SXoA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css" integrity="sha512-BiFZ6oflftBIwm6lYCQtQ5DIRQ6tm02svznor2GYQOfAlT3pnVJ10xCrU3XuXnUrWQ4EG8GKxntXnYEdKY0Ugg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     
     <title>House Hunt</title>
 </head>
-<body>
-      
-    <!--yoo-->
-    <div class="container">
-      <h1 class="heading">
-        <span class="heading-span-1">Sign</span
-        ><span class="heading-span-2">In</span>
-      </h1>
-      <div class="buttons">
-        <button class="signin-btn">SignIn</button>
-        <button class="signup-btn">SignUp</button>
+<body >
+  <div>
+    <section>
+      <div class="navbar">
+          <a class="navbar-brand" href="index.html">
+              <div class="logo-image">
+                    <img src="img/logo2.png" class="img-fluid">
+              </div>
+        </a>
+        <div>
+          <a href="./index.html">HOME</a>
+          <a href="./all-properties.html">RENT</a>
+          <a href="all-properties.html">BUY</a>
+          <a href="./about.html">ABOUT US</a>
+          </div>
+          <div class="col">
+          <button type="button"  class="btn-menu" style="float: right;" ><i class="fas fa-plus-circle"></i>CREATE LIST</button>
+          <button type="button" class="btn-menu" style="float: right;" ><i class="fa fa-sign-in"></i>SIGN IN</button>
+        </div>
+        </div>
+        </section>
+    <section id="caurasel" class="container">
+      <!--change images-->
+      <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+        <div class="gallery-cell"><img src="/img/brian/a286fb0b-98f5-42bb-a7c1-ad8354a09c0b.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="/img/brian/bdfc5b3c-d4b9-4ac8-96c7-57f70e8b6780.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="/img/brian/e259b794-80ef-4ed8-9522-a8e8fe6f0c97.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="/img/brian/f86778a7-a5c6-42d9-ab9c-5fce5e9c2817.jpg" alt=""></div>
       </div>
-      <div class="form-bg"></div>
-      <form class="form sign-in" action="/index.html" onsubmit="myFunction()">
-        <div class="form-input-wrapper">
-          <input
-            autocomplete="off"
-            type="text"
-            class="form-input"
-            id="username"
-            placeholder="Your Name"
-          />
-          <p class="message">Error Message</p>
+    </section>
+    <section class="container mt-5 pt-5">
+      <div class="mt-5 pt-5">
+        <div class="position-relative">
+          <div class="position-absolute top-50 end-0 translate-middle-y" style="width: 18rem;">
+            <img src="./myImages/pic1.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3>Iconic Houses</h3>
+              <i class='fas fa-phone-volume' style='font-size:36px'></i>
+              <i class='fas fa-mail-bulk' style='font-size:36px'></i>
+              <i class='fab fa-whatsapp' style='font-size:36px'></i>
+            </div>
+            </div>
+          </div>
         </div>
-        <div class="form-input-wrapper">
-          <input
-            autocomplete="off"
-            type="text"
-            class="form-input"
-            id="email"
-            placeholder="Email Address"
-          />
-          <p class="message">Error Message</p>
-        </div>
-        <div class="form-input-wrapper">
-          <input
-            autocomplete="off"
-            type="password"
-            class="form-input"
-            id="password"
-            placeholder="Password"
-          />
-          <p class="message">Error Message</p>
-        </div>
-        <div class="form-input-wrapper">
-          <input
-            autocomplete="off"
-            type="password"
-            class="form-input"
-            id="password2"
-            placeholder="Confirm Password"
-          />
-          <p class="message">Error Message</p>
-        </div>
-        <input type="submit" value="Submit" class="form-btn" />
-      </form>
-    </div>
-    <script>
-        function myFunction() {
-          alert("The form was submitted");
-        }
-        </script>
-    <script src="form.js"></script>   
-  </body>
+      </div>
+      <div>
+        <h1>5 bedroom townhouse for rent in Rosslyn</h1>
+        <p>Lonne tree, Lonne tree, Rosslyn, Westlands</p>
+        <p>
+          <i class="fa fa-bed swing product-icon p-2">4</i>
+          <i class="fa fa-shower swing product-icon p-2">4</i>
+          </p>
+        <p>This very well designed house with proper access and view. It is all ensuite with spacious living room with terrace overlooking the garden, spacious modern kitchen, enough lighting and well lit. It in a very good and convenient location of Rosslyn lonne tree with a good aproximity to village market, UN, German school, ISK, two rivers mall and US embassy.</p>
+        <p>Its close proximity to ABC (walking distance) Kianda school,Quick mart,Big square,Naivas supermarket,Sarit Centre,etc...</p> 
+      </div>
+    </section>
+  </div>
    <!--footer-->
    <section class="mt-5 footer-main">
     <footer class=" footer text-center ">
@@ -159,4 +155,5 @@
       </footer>
 </section>
 <!--end of footer-->
-  </html>
+</body>
+</html>
