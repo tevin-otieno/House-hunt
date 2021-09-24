@@ -1,5 +1,5 @@
 body {
-  padding-top: 10%; 
+  padding-top: 5%; 
 }
 *{
   padding: 0;
@@ -37,7 +37,7 @@ body, html {
     display: block;
     color: #f7f3f1;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1px 16px;
     text-decoration: none;
     font-size: 17px;
   }
